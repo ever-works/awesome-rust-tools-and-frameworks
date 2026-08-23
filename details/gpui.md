@@ -1,0 +1,1 @@
+## Overview\nGPUI is a Rust GUI library with mixed support across platforms.\n\n## Notes\nThe matrix reports both successful and failing aspects depending on target.

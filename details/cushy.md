@@ -1,0 +1,1 @@
+## Overview\nCushy is a GUI project with limited details in the discussion.\n\n## Notes\nStatus in the matrix suggests partial functionality.

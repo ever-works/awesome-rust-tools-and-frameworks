@@ -1,0 +1,1 @@
+## Overview\nIced is a Rust GUI library with an Elm-inspired architecture.\n\n## Notes\nAccessibility and consistency issues mentioned; still a viable option for many apps.

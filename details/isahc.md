@@ -1,0 +1,2 @@
+## Overview
+Isahc wraps curl under a stable Rust API, providing both synchronous and asynchronous HTTP requests. It includes support for HTTP/1.1 and HTTP/2, configurable timeouts, and cookie persistence.

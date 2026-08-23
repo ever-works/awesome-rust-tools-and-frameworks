@@ -1,0 +1,1 @@
+## Overview\nFlutter Rust Bridge enables calling Rust from Flutter or vice versa.\n\n## Notes\nState management can be complex in migrations; integration requires careful data handling.

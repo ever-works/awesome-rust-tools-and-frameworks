@@ -1,0 +1,2 @@
+## Overview
+hyper is a low-level HTTP library written in Rust. It is asynchronous by design and supports both client-side and server-side APIs. It is a foundational library used by higher-level clients such as reqwest. Features include HTTP/1 and HTTP/2 support, and it is widely used in production. The article notes a strong community and active maintenance.

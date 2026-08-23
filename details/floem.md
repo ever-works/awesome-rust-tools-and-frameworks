@@ -1,0 +1,1 @@
+## Overview\nFloem is a Rust GUI library emphasizing declarative UI and performance.\n\n## Notes\nAccessibility issues are discussed as areas for improvement.

@@ -1,0 +1,2 @@
+## Overview
+Reqwest offers an HTTP client built on hyper, with an async and blocking client. It supports proxies, cookies, and a range of body types (plain, JSON, urlencoded, multipart) and custom redirect policies.

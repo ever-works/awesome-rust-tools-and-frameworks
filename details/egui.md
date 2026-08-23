@@ -1,0 +1,1 @@
+## Overview\negui is a Rust GUI library with an immediate-mode design.\n\n## Notes\nPromotes writing UI code in a straightforward, imperative style.

@@ -1,0 +1,170 @@
+# Awesome Rust Tools and Frameworks
+
+List of Awesome Rust Tools and Frameworks
+
+
+## 📑 Table of Contents
+
+- [Async & Networking (8)](#async--networking)
+- [Data & ML (1)](#data--ml)
+- [Databases & ORMs (5)](#databases--orms)
+- [Developer Tooling (1)](#developer-tooling)
+- [Embedded (1)](#embedded)
+- [GUI (49)](#gui)
+- [Observability (1)](#observability)
+- [Security (2)](#security)
+- [Testing (7)](#testing)
+- [Web Frameworks (20)](#web-frameworks)
+
+
+## Async & Networking
+
+- [curl-rust](https://github.com/alexcrichton/curl-rust) - curl-rust offers libcurl bindings for Rust, exposing the functionality of libcurl with Rust safety. It does not provide asynchronous requests, so it can be slower and more resource-heavy than asynchronous options. Use curl-rust when you specifically need curl support or have an existing stack that already relies on curl; it also includes support for protocols such as Telnet, SMTP, FTP, IMAP, and LDAP. ([Read more](/details/curl-rust.md)) `Open Source` `Sync` `Http`
+- [hyper](https://hyper.rs/) - Hyper is a low-level HTTP library for Rust that is asynchronous by design. It provides client- and server-side APIs and is widely used as the foundation for other libraries (e.g., reqwest). ([Read more](/details/hyper.md)) `Open Source` `Async` `Http`
+- [Isahc](https://crates.io/crates/isahc) - Isahc is a high-level HTTP client with both asynchronous and synchronous interfaces, built on top of curl. It combines ergonomic API with curl’s stability and wide protocol support, including HTTP/1.1 and HTTP/2. ([Read more](/details/isahc.md)) `Open Source` `Http` `Curl`
+- [reqwest](https://docs.rs/reqwest) - Reqwest is a high-level HTTP client built on top of hyper. It provides an ergonomic API with both asynchronous and blocking clients, supports proxies, cookies, and customizable redirect policies, and can handle plain bodies, JSON, URL-encoded, and multipart data. ([Read more](/details/reqwest.md)) `Open Source` `Async` `Http`
+- [Rustify](https://crates.io/crates/rustify) - Rustify is a lightweight and flexible library for building HTTP clients in Rust. It aims to simplify scaffolding HTTP APIs with support for both asynchronous and synchronous clients, custom client implementations, and middleware. ([Read more](/details/rustify.md)) `Open Source` `Http` `Middleware`
+- [Surf](https://http-rs.github.io/surf) - Surf is a modular, asynchronous HTTP client with a middleware system. It can use a curl-native client by default, or alternative backends like curl-client or hyper-client. It focuses on extensibility and streaming capabilities. ([Read more](/details/surf.md)) `Open Source` `Async` `Http`
+- [tokio-curl](https://github.com/alexcrichton/tokio-curl) - Tokio-curl provides a futures-based interface to libcurl for asynchronous HTTP requests in Rust, using the Tokio runtime. ([Read more](/details/tokio-curl.md)) `Open Source` `Async` `Http`
+- [ureq](https://github.com/algesten/ureq) - Ureq is a minimal, blocking HTTP client with a focus on simplicity and safety. It avoids unsafe Rust, keeps dependencies small, and emphasizes fast compile times. It does not support asynchronous functionality. ([Read more](/details/ureq.md)) `Open Source` `Sync` `Http`
+
+## Data & ML
+
+- [Rust for Data Science](https://levelup.gitconnected.com/rust-for-data-science-9a0dfce3921a) - A Level Up Coding blog post exploring how Rust can be used for data science, discussing motivations, getting started, and highlighting key libraries for Rust data science. ([Read more](/details/rust-for-data-science.md)) `Data Science` `Rust` `Tutorial`
+
+## Databases & ORMs
+
+- [Cornucopia](https://crates.io/crates/cornucopia) - Cornucopia takes a unique approach: you write SQL in .sql files, and it generates type-safe Rust code from those queries. It's similar to sqlc in the Go world. You write a query file and Cornucopia generates Rust functions with the correct types. No macros, no runtime overhead - just generated code. Good for: Teams that want SQL-first development with zero runtime cost. The generated code is easy to audit. ([Read more](/details/cornucopia.md)) `Open Source` `Rust` `Orm`
+- [Diesel](https://diesel.rs) - Diesel is a data mapper and query builder for Rust that can be used as an ORM. It emphasizes compile-time safety via table! macros and supports migrations and model-like querying. It is used at scale, notably powering crates.io via diesel-async. ([Read more](/details/diesel.md)) `Open Source` `Rust` `Orm`
+- [Diesel Async](https://crates.io/crates/diesel-async) - Diesel-async brings async support to Diesel, providing the same DSL and compile-time safety but with async/await and built-in connection pooling via bb8 or deadpool. ([Read more](/details/diesel-async.md)) `Async` `Rust` `Orm`
+- [SeaORM](https://sea-ql.org) - SeaORM is a fully async-friendly Rust ORM that builds on SQLx, abstracting raw SQL to provide a clean interface with derive macros and traits for models. It includes a CLI for generating migrations, entities, and models, and implements ActiveModel to extend model behavior. It aims for fast compilation times and easy integration with frameworks like Axum. ([Read more](/details/seaorm.md)) `Open Source` `Async` `Orm`
+- [SQLx](https://github.com/softprops/sqlx) - SQLx is an async, pure-Rust SQL library that lets you write raw SQL while providing compile-time checking and type safety via query! and query_as! macros. ([Read more](/details/sqlx.md)) `Open Source` `Rust` `Sql`
+
+## Developer Tooling
+
+- [clippy](https://github.com/rust-lang-nursery/rust-clippy) - Clippy is a collection of lints to catch common mistakes and improve Rust code. It analyzes code for idiomatic issues, potential bugs, and performance concerns, and is invoked via cargo clippy. ([Read more](/details/clippy.md)) `Open Source` `Lint` `Static Analysis`
+
+## Embedded
+
+- [Probe Run](https://github.com/knurling-rust/probe-run) - Tool to flash firmware and debug embedded projects. Once set up, you can compile, flash, and debug from a terminal using cargo run when a hardware probe is connected. ([Read more](/details/probe-run.md)) `Open Source` `Embedded` `Debugging`
+
+## GUI
+
+- [Azul](https://github.com/maps4print/azul) - Azul is a Rust GUI framework known for its render/renderer internals and the associated linker challenges; the article highlights linker hell as a notable issue. ([Read more](/details/azul.md)) `Open Source` `Rust` `Linker Issues`
+- [Bevy](https://bevyengine.org/) - Bevy is a simple, data-driven game engine built around an ECS design. It supports 2D and 3D rendering, includes Bevy UI for in-code or scene-based UI, and supports hot asset reloading for rapid iteration. The project is actively developed and subject to breaking changes as it evolves. ([Read more](/details/bevy.md)) `Open Source` `Rust` `Ecs`
+- [cacao](https://crates.io/crates/cacao) - Cacao is a macOS-specific component/toolkit used for Mac GUI development, mentioned alongside other macOS UI bindings. ([Read more](/details/cacao.md)) `Macos` `Bindings`
+- [Comfy](https://comfy.rs/) - Comfy is a simple but powerful and opinionated Rust game engine inspired by Macroquad, raylib and Love2D. It uses the wgpu and winit graphics stack for cross‑platform builds (Wasm, Windows, Linux, macOS). ([Read more](/details/comfy.md)) `Open Source` `Rust` `Wgpu`
+- [core-foundation](https://github.com/servo/core-foundation-rs) - Core Foundation bindings for macOS, providing lower-level interactions with macOS APIs from Rust. ([Read more](/details/core-foundation.md)) `Macos` `Bindings` `Core Foundation`
+- [Crux](https://crates.io/crates/crux) - Crux is a GUI toolkit mentioned as having no desktop targets, illustrating a project with limited platform support. ([Read more](/details/crux.md)) `No Desktop Targets` `Bindings` `Gui`
+- [Cushy](https://crates.io/crates/cushy) - Cushy is a GUI-related project mentioned in a feature matrix with statuses; details are limited in the text. ([Read more](/details/cushy.md)) `Bindings` `Gui` `Matrix`
+- [CXX-Qt](https://crates.io/crates/cxx-qt) - CXX-Qt is a Rust-C++ bridge library enabling type-safe bindings between Rust and Qt in GUI apps; noted for linker issues. ([Read more](/details/cxx-qt.md)) `Bindings` `Qt` `Ffi`
+- [Dear ImGui (imgui-rs)](https://github.com/imgui-rs/imgui) - Dear ImGui is a minimalist C++ GUI library with Rust bindings; it is designed for integration with existing game engines and renders through multiple backends. The Rust ecosystem has bindings like imgui-rs and multiple renderers/backends such as imgui-glow-renderer and imgui-winit-support, with others being deprecated. ([Read more](/details/dear-imgui-imgui-rs.md)) `Rust` `Bindings` `Gui`
+- [Dioxus](https://dioxuslabs.com/) - Dioxus is a Rust UI library and toolchain for building high-performance, portable user interfaces with a focus on Rust and WebAssembly. ([Read more](/details/dioxus.md)) `Open Source` `Rust` `Web Framework`
+- [Dominator](https://crates.io/crates/dominator) - Dominator is a GUI framework with web-target support; described as web-specific in the discussion. ([Read more](/details/dominator.md)) `Web` `Bindings` `Gui`
+- [egui](https://github.com/emilk/egui) - egui is a pure Rust immediate mode GUI library that emphasizes a straightforward, code-first approach to building UIs. ([Read more](/details/egui.md)) `Immediate Mode` `Rust`
+- [Floem](https://floem.rs) - Floem is a Rust GUI library with a focus on declarative UI and performance. The article notes accessibility issues in Floem and iced. ([Read more](/details/floem.md)) `Open Source` `Rust` `Declarative`
+- [fltk](https://github.com/fltk-rs/fltk-rs) - FLTK bindings for Rust (fltk-rs). The article notes it has 'yes!' support and an extra crate, and it is cross-platform. ([Read more](/details/fltk.md)) `Bindings` `Cross Platform`
+- [flutter_rust_bridge](https://github.com/fzyzcjy/flutter_rust_bridge) - flutter_rust_bridge is a bridge to connect Flutter/Dart with Rust, enabling arguments to be exchanged for GUI apps; the article notes state-hell in integration. ([Read more](/details/flutter-rust-bridge.md)) `Bindings` `Flutter` `Dart`
+- [Freya](https://freya.rs) - Freya is a Rust GUI framework described as basically usable now if you don’t mind bleeding-edge experiments and some jank. ([Read more](/details/freya.md)) `Bleeding Edge` `Usable`
+- [fui](https://crates.io/crates/fui) - fui is a Rust GUI library; the article lists it among options but notes various issues. ([Read more](/details/fui.md)) `Bindings` `Rust`
+- [Fyrox](https://fyrox.rs/) - Fyrox is a production‑ready game engine focusing on 2D and 3D rendering with extensive documentation and a scene editor. It supports Windows, Linux, macOS, and WebAssembly, and emphasizes fast iterative compilation so developers can test changes quickly. ([Read more](/details/fyrox.md)) `Open Source` `Rust` `Wasm`
+- [GemGui](https://crates.io/crates/gemgui) - GemGui is a GUI library mentioned in the table; the article lists it as technically possible but not much detail. ([Read more](/details/gemgui.md)) `Bindings` `Rust`
+- [ggez](https://ggez.rs/) - ggez is a Rust game development library providing a 2D game framework with APIs for drawing, sound, resources and event handling, aiming to be lightweight and with a design inspired by Love2D. ([Read more](/details/ggez.md)) `Open Source` `Rust` `2d`
+- [GPUI](https://crates.io/crates/gpui) - GPUI is a GUI library with notes about rendering; the article shows 'yes!', 'nope', and 'yes!'. ([Read more](/details/gpui.md)) `Bindings` `Rust`
+- [GTK 3 bindings](https://gtk-rs.org/) - UNMAINTAINED Rust bindings for the GTK+ 3 library; gtk4 bindings exist and are recommended for new projects. ([Read more](/details/gtk3.md)) `Gtk3` `Bindings` `Gtk`
+- [Iced](https://iced.rs/) - Iced is a Rust GUI library inspired by Elm; the article notes accessibility issues and quality concerns, but suggests it remains a viable option. ([Read more](/details/iced.md)) `Open Source` `Rust` `Elm Inspired`
+- [KAS](https://crates.io/crates/kas) - KAS is a GUI library mentioned in the compatibility matrix with support status; details vary. ([Read more](/details/kas.md)) `Bindings` `Rust`
+- [LVGL](https://lvgl.io/) - LVGL (Light and Versatile Graphics Library) is a small, feature-rich GUI library written in C for embedded devices. The Rust bindings expose a no_std-friendly interface by default, making LVGL suitable for bare-metal targets. The content describes C header configurations and Windows-related build issues when binding LVGL via Rust. ([Read more](/details/lvgl.md)) `Embedded` `no_std` `Bindings`
+- [Macroquad](https://macroquad.rs/) - Macroquad is a simple cross‑platform Rust library for game development focused on minimalism. It targets Windows, Linux, macOS, HTML5, Android and iOS, and abstracts away Rust‑specific syntax to let developers focus on game logic. ([Read more](/details/macroquad.md)) `Open Source` `Rust` `Cross Platform`
+- [Makepad](https://makepad.dev/) - Makepad is a Rust-based GUI framework featuring a macro DSL for building interfaces. The project publishes crates on crates.io but does not consistently align version tags with Git tags, so examples on the main branch are often the most reliable reference. It provides live_design style DSL blocks for UI definition. ([Read more](/details/makepad.md)) `Rust` `Gui` `Dsl`
+- [masonry](https://crates.io/crates/masonry) - Masonry is the building-block framework that Xilem is built on top of; a masonry-based UI framework contributing to the Xilem ecosystem. ([Read more](/details/masonry.md)) `Framework` `Rust`
+- [Maycoon](https://crates.io/crates/maycoon) - Maycoon is a GUI library mentioned as having no text input widget; status in the matrix indicates incomplete capabilities. ([Read more](/details/maycoon.md)) `Bindings` `Rust`
+- [nannou](https://nannou.org/) - nannou is an open source game framework that acts as a toolkit for graphics, audio, lasers, lighting and more. It is aimed at artists and creators and emphasizes Rust‑first libraries with examples and a Rust‑only tooling approach. ([Read more](/details/nannou.md)) `Open Source` `Rust` `Graphics`
+- [Pax](https://crates.io/crates/pax) - Pax is a GUI library mentioned with no Windows support; cross-platform differences noted. ([Read more](/details/pax.md)) `Bindings` `Windows Unsupported`
+- [Piston](https://www.piston.rs/) - Piston is a modular, open‑source game engine comprised of a collection of libraries for 2D/3D graphics, image processing, event handling, GUI, sound and animation. Its public API supports inputs like gamepads and mice, and includes an event loop architecture. It also uses a lightweight scripting language called Dyon designed for game engines. ([Read more](/details/piston.md)) `Open Source` `Rust` `Modular`
+- [QMetaObject](https://crates.io/crates/qmetaobject) - QMetaObject is a Rust binding approach for Qt, aiming to bring Qt bindings into Rust code. The page references a Rust-based approach to Qt bindings with an emphasis on code generation for Qt metadata. ([Read more](/details/qmetaobject.md)) `Qt` `Bindings` `Rust`
+- [Ratatui](https://lib.rs/crates/ratatui) - Ratatui is a Rust crate for cooking up terminal user interfaces (TUIs). It provides a simple and flexible way to create text-based user interfaces in the terminal, which can be used for command-line applications, dashboards, and other interactive console programs. ([Read more](/details/ratatui.md)) `Open Source` `Terminal Ui` `Rust`
+- [relm](https://relm.rs/) - relm is a Rust GUI toolkit inspired by Elm, built on GTK 3 bindings. The project emphasizes a message-driven architecture and GTK-based rendering. It is referenced as part of the GTK-3 bindings ecosystem and is challenged by Unix-style path issues in some environments. ([Read more](/details/relm.md)) `Gtk3` `Rust`
+- [Relm4](https://relm4.org/) - Relm4 is a Rust GUI framework built on GTK 4, offering a higher-level architecture for GTK 4 applications. The content notes similar benefits and caveats as Relm, but with GTK 4 as the target. ([Read more](/details/relm4.md)) `Gtk4` `Rust`
+- [rend3](https://rend3.org/) - rend3 is a 3D rendering library built with Rust and wgpu. It provides a collection of libraries to render 3D graphics in Rust and can be used by game engine developers for building 3D rendering into their engines. ([Read more](/details/rend3.md)) `Open Source` `Rust` `Wgpu`
+- [Ribir](https://ribir.org/) - Ribir is a Rust GUI framework that markets itself as non-intrusive, allowing GUI components to read and write model objects directly. The page describes it but notes that its macro-based code may be challenging to get working. ([Read more](/details/ribir.md)) `Rust` `Gui`
+- [Rinf](https://crates.io/crates/rinf) - Rinf is a GUI toolkit that does not use Rust for GUI; included in the discussion as a contrasting option. ([Read more](/details/rinf.md)) `Bindings` `Rust`
+- [rui](https://rui.rs/) - rui is a Rust GUI library inspired by SwiftUI, aiming to provide a clean API with a concise state model. The content shows a small App using nested views and a stateful label with a text editor. ([Read more](/details/rui.md)) `Swiftui Inspired` `Rust`
+- [rust-analyzer](https://github.com/rust-analyzer/rust-analyzer) - rust-analyzer is a language server that provides IDE features for Rust, such as go-to-definition, autocomplete, inline errors, and refactoring. It runs as a server in the editor, not a cargo subcommand. ([Read more](/details/rust-analyzer.md)) `Open Source` `Language Server` `IDE`
+- [Slint](https://slint-ui.org/) - Slint (formerly SixtyFPS) is a Rust GUI DSL with its own engine and two-way data binding. It ships with C++, JavaScript, and Python bindings and aims to provide native UI with a separate DSL rather than Rust macros. The project emphasizes accessibility improvements and cross-language bindings. ([Read more](/details/slint.md)) `Dsl` `Two Way Binding` `Bindings`
+- [tinyfiledialogs](https://sourceforge.net/projects/tinyfiledialogs/) - tinyfiledialogs is a C library with Rust bindings providing a handful of basic prompts, including message boxes, text input, and file dialogs. ([Read more](/details/tinyfiledialogs.md)) `Open Source` `Bindings` `Cross Platform`
+- [Tk](https://www.tcl.tk/) - Tk is the GUI framework for Tcl with Rust bindings. The blog notes its use with two-way binding patterns and shows bindings via a r#type workaround for Rust reserved keywords. ([Read more](/details/tk.md)) `Bindings` `Cross Platform`
+- [Vizia](https://crates.io/crates/vizia) - Vizia is a Rust GUI library featuring a declarative, data-driven approach with widget composition. It demonstrates a model with AppData and AppEvent, Lens-driven state, and a simple vertical layout with Label and Textbox widgets. ([Read more](/details/vizia.md)) `Open Source` `Rust` `Declarative`
+- [WebRender](https://github.com/servo/webrender) - WebRender is a low-level graphics crate originally part of Servo, focused on rendering shapes for high-performance UIs and browsers. It is not a high-level GUI toolkit, but provides the rendering substrate used by more complete UI systems. ([Read more](/details/webrender.md)) `Low Level` `Graphics` `Rust`
+- [Windows (Rust bindings)](https://github.com/microsoft/windows-rs) - Windows is an operating system, and here the entry discusses Rust bindings for Windows APIs. The discussion notes that XAML is not included in the Windows crate and describes WinUI 3 support in other bindings. ([Read more](/details/windows.md)) `Windows` `Bindings` `Platform`
+- [WinSafe](https://crates.io/crates/winsafe) - WinSafe is a set of Rust wrappers around the Win32 GUI API, providing a higher-level interface for building Windows desktop apps. ([Read more](/details/winsafe.md)) `Windows` `Bindings`
+- [Xilem](https://github.com/linebender/xilem) - Xilem is a novel pure-Rust framework built on top of masonry, the successor to Druid. It emphasizes a compact, widget-based approach and a modern event loop model. ([Read more](/details/xilem2.md)) `Experimental` `Rust` `Framework`
+
+## Observability
+
+- [log](https://crates.io/crates/log) - log is a lightweight logging facade crate that provides a single API and relies on a separate backend crate to perform the actual output. Maintained by the official Rust team, it is widely used as a foundational crate for Rust logging. ([Read more](/details/log.md)) `Rust` `Logging` `Facade`
+
+## Security
+
+- [cargo-audit](https://github.com/rustsec/cargo-audit) - Cargo-audit checks Rust dependencies for security advisories and known vulnerabilities, integrating with the cargo workflow to help maintain crate security. ([Read more](/details/cargo-audit.md)) `Open Source` `Security` `Vulnerability`
+- [cargo-geiger](https://crates.io/crates/cargo-geiger) - Cargo-geiger is a cargo subcommand that analyzes Rust dependencies to detect usage of unsafe code, helping identify potential security risks across crates. It is invoked as cargo geiger and integrates into the standard Rust tooling workflow. ([Read more](/details/cargo-geiger.md)) `Open Source` `Security` `Static Analysis`
+
+## Testing
+
+- [assert_cmd](https://crates.io/crates/assert_cmd) - Assert_cmd is a Rust crate designed to simplify integration testing of CLI applications by locating the binary to test and asserting the program's exit status and output. ([Read more](/details/assert_cmd.md)) `Rust` `Open Source` `Cli`
+- [cargo-make](https://sagiegurari.github.io/cargo-make) - Cargo-make is a Rust-based task runner and automation tool that executes Makefile.toml-defined tasks. It supports extending and overriding tasks from external Makefiles, automatic workspace-level makefile extension, and load_script-based fetching of common TOML files. It provides per-task and per-platform overrides, and comprehensive environment variable handling via env blocks, env_files, and env_scripts. ([Read more](/details/cargo-make.md)) `Build Tool` `Rust` `Workflow`
+- [Criterion.rs](https://bheisler.github.io/criterion.rs/) - Criterion.rs is a statistically-driven benchmarking library for Rust that detects even small performance changes in code and provides statistically-backed analysis, including HTML reports and optional plotting. ([Read more](/details/criterion-rs.md)) `Open Source` `Benchmarking` `Rust`
+- [insta](https://crates.io/crates/insta) - Insta is a snapshot testing library for Rust. It lets developers capture complex values as reference snapshots and compare subsequent test outputs against those snapshots, which is helpful for large or frequently changing data structures. ([Read more](/details/insta.md)) `Rust` `Open Source` `Snapshot Testing`
+- [kittest](https://crates.io/crates/kittest) - kittest is a testing utility crate mentioned in the compatibility matrix. ([Read more](/details/kittest.md)) `Testing` `crates.io`
+- [Proptest](https://crates.io/crates/proptest) - Proptest is a property-based testing framework for Rust, inspired by Hypothesis. It generates random inputs to test properties of code and shrinks failing inputs to the minimal counterexample, helping uncover edge conditions that traditional unit tests might miss. ([Read more](/details/proptest.md)) `Rust` `Open Source` `Property Testing`
+- [QuickCheck](https://crates.io/crates/quickcheck) - QuickCheck is a property-based testing framework for Rust. It generates random inputs to test that a property holds for all inputs and automatically shrinks a failing counterexample to the minimal failing case. ([Read more](/details/quickcheck.md)) `Rust` `Open Source` `Property Testing`
+
+## Web Frameworks
+
+- [Actix Web](https://actix.rs/) - Actix Web is a popular Rust backend framework known for its type-safety, performance, and feature-rich ecosystem. It supports HTTP/2, logging, and a broad set of middleware and extensions, and can be extended with many crates for additional capabilities. ([Read more](/details/actix-web.md)) `Open Source` `Rust` `Web Framework`
+- [Axum](https://axum.rs/) - Axum is a Rust web framework built on top of Tower and Hyper, designed to be robust, performant, reliable, and ergonomic. It integrates with Tokio for asynchronous runtime and leverages the Tower and tower-http ecosystems to provide middleware, services, and utilities. Axum emphasizes flexibility and type safety for building modular, scalable web applications. ([Read more](/details/axum.md)) `Open Source` `Rust` `Web Framework`
+- [Cot](https://github.com/cot-rs/cot) - Cot is a cutting-edge web framework for building high-performance, async-first APIs in Rust. Built on top of Tokio and Hyper, Cot prioritizes modularity and speed over batteries-included features. It's ideal for developers who want maximum control over their request pipeline and are comfortable assembling tools a la carte. ([Read more](/details/cot.md)) `Open Source` `Backend` `Async`
+- [Dropshot](https://crates.io/crates/dropshot) - Dropshot is a simple and lightweight server-side library for creating REST APIs. It has support for OpenAPI specs, async, and logging. It's not a full web framework (at least, not for all web development use cases). ([Read more](/details/dropshot.md)) `Open Source` `Backend` `Api`
+- [Gotham](https://gotham.rs/) - Gotham is a flexible web framework built for stable Rust that promotes stability, safety, security, and speed. It provides async support with the help of Tokio and hyper out of the box, including routing, extractors, middleware, state sharing, and testing. ([Read more](/details/gotham.md)) `Open Source` `Backend` `Async`
+- [Leptos](https://www.leptos.dev/) - Leptos is a Rust front-end framework for building fast and small web apps using WebAssembly. It enables Yew-like component-based development with a reactive engine and virtual DOM rendering. ([Read more](/details/leptos.md)) `Open Source` `Rust` `Web Framework`
+- [Loco](https://loco.rs/) - Loco is a Rust web framework designed for solo developers working on side projects. It provides batteries-included services, data management, email handling, background jobs, tasks, and a powerful CLI, modeling Rails-like productivity for single-developer teams. ([Read more](/details/loco.md)) `Open Source` `Rust` `Web Framework`
+- [Perseus](https://perseus.dev/) - Perseus is a Rust framework for building reactive web applications with server-side rendering (SSR) and static site generation (SSG). It leverages the Sycamore reactive library and provides an experience comparable to Next.js for the Rust ecosystem, with a growing community. ([Read more](/details/perseus.md)) `Open Source` `SSR` `SSG`
+- [Poem](https://poem.rs/) - Poem is a Rust web framework designed for simplicity, speed, and reliability. It is built on top of Hyper and Tokio, providing fast asynchronous web applications with a focus on type-safety and ease of use. ([Read more](/details/poem.md)) `Open Source` `Rust` `Web Framework`
+- [Rocket](https://rocket.rs/) - Rocket by far is the most popular Rust web framework. It is known for its simplicity and ease of use. It is known for it's type safety, boilerplate free, and extensibility. ([Read more](/details/rocket.md)) `Open Source` `Rust` `Web Framework`
+- [Rouille](https://rouille.rs/) - Rouille is a microweb framework that employs a linear request/response design via a listening socket. It is built for simple applications and does not come with batteries included, but is agnostic enough to allow you to integrate other libraries for features like middleware. ([Read more](/details/rouille.md)) `Open Source` `Backend` `Microframework`
+- [rustfmt](https://github.com/rust-lang/rustfmt) - Rustfmt is the community standard for Rust code formatting. It reformats source files to match a strict set of rules and is commonly invoked via the cargo fmt subcommand. The default rustfmt configuration represents the convention, with rustfmt.toml available to customize behavior; if configured, the config file should be committed to CI to avoid CI-local differences. ([Read more](/details/rustfmt.md)) `Open Source` `Formatter` `Code Style`
+- [Sauron](https://sauron.rs/) - Sauron is a micro frontend framework inspired by the Elm Architecture. It supports events, state management, and both client-side and server-side rendering. It has a growing community with a few thousand GitHub stars. ([Read more](/details/sauron.md)) `Open Source` `Frontend` `Elm Inspired`
+- [Sycamore](https://sycamore.rs/) - Sycamore is a Rust web framework that compiles to WebAssembly. The chat discusses a feature where a 'bind:' modifier supports reactive bindings for attributes, and contrasts it with the Rust keyword handling for attributes. The framework is used as an example alongside Dioxus and Yew in the Rust GUI/WEB ecosystem. ([Read more](/details/sycamore.md)) `Wasm` `Rust` `Frontend`
+- [Tauri](https://tauri.app/) - Tauri is a cross-platform framework for building desktop apps with Rust and web technologies; it uses system web engines (WebView2/WebKit) for rendering and does not bundle separate browser instances. It has bindings to popular frontend frameworks in Rust such as Dioxus and Leptos, and can integrate with various frontend stacks. ([Read more](/details/tauri.md)) `Rust` `Webview` `Frontend`
+- [Thruster](https://docs.rs/thruster) - Thruster is a fast, middleware-based Rust web framework inspired by the layering and design of Koa and Express.js. It is SSL-ready, secure, intuitive, and testable. ([Read more](/details/thruster.md)) `Open Source` `Backend` `Middleware`
+- [Tide](https://github.com/http-rs/tide) - Tide is a minimal framework similar to Express.js (Node.js), Sinatra (Ruby), and Flask (Python) for rapid development that promotes asynchronously building web apps. It has most of the functionalities you'll find in mature frameworks including routing, auth, sockets, templates, middleware, testing, and other utilities. ([Read more](/details/tide.md)) `Open Source` `Backend` `Async`
+- [Trunk](https://trunk-rs.github.io/trunk) - Trunk is a WASM web application bundler for Rust. It builds and bundles WASM, JavaScript snippets, and other assets (images, CSS, SCSS) from a source HTML file, producing a dist directory ready to serve. It uses a simple, optional-config pattern for building and bundling WASM, JS, and assets. ([Read more](/details/trunk.md)) `Open Source` `Rust` `Wasm`
+- [Warp](https://github.com/seanmonstar/warp) - Warp is designed to be fast, lightweight, and composable. It's easy to get started with it as soon as possible and start building highly performant APIs. ([Read more](/details/warp.md)) `Open Source` `Backend` `Async`
+- [Yew](https://yew.rs/) - Yew is a popular Rust framework for building modern web applications with a component-based architecture inspired by React. It provides state management, asynchronous capabilities, and tooling to scaffold and serve apps, often using the Trunk bundler for development. It is widely adopted with a large GitHub community. ([Read more](/details/yew.md)) `Open Source` `Frontend` `Wasm`
+
+
+## Legal
+
+All product names, logos, and brands are the property of their respective owners. All company, product, and service names used in this repository, related repositories, and associated websites are for identification purposes only. The use of these names, logos, and brands does not imply endorsement, affiliation, or sponsorship.
+
+This directory may include content generated by artificial intelligence (AI). While efforts have been made to ensure the accuracy and reliability of the information, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information contained herein. Users are advised to independently verify the information before making decisions based on it.
+
+We disclaim any responsibility for errors, omissions, or inaccuracies in the content, whether generated by humans, AI, or any other means. By using this directory, you agree to use it at your own risk and acknowledge that the information provided may not always be current or accurate.
+
+If you believe that your intellectual property rights or other legal rights have been infringed, please contact us immediately at legal@ever.co and we will take appropriate action.
+
+## License
+
+Shield: [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
+
+This work is licensed under a
+
+[Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
+
+[![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
+
+[cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
+
+[cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
+
+[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg

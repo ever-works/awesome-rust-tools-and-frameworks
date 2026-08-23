@@ -1,0 +1,2 @@
+## Overview
+Surf is an extensible, asynchronous HTTP client with a middleware system. It can use curl as the default native client, and supports alternatives like curl-client or hyper-client. Notable features include middleware extensibility, connection reuse, streaming requests/responses, and HTTP/2/TLS-by-default.

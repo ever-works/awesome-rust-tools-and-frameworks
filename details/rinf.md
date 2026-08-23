@@ -1,0 +1,1 @@
+## Overview\nRinf is a GUI library that does not rely on Rust for GUI rendering.\n\n## Notes\nUsed as a comparison point in the article.

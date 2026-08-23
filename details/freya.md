@@ -1,0 +1,1 @@
+## Overview\nFreya is a Rust GUI framework aimed at early usability with some rough edges.\n\n## Notes\nBleeding-edge but functional for early adopters.

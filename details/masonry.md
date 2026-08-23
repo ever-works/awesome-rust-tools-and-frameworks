@@ -1,0 +1,1 @@
+## Overview\nMasonry is a layout framework used by Xilem and other Rust GUI projects.\n\n## Notes\nServes as a foundation for higher-level GUI tooling.
